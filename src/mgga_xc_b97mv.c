@@ -95,9 +95,9 @@ extern "C"
 const xc_func_info_type xc_func_info_mgga_xc_b97m_rv = {
   XC_MGGA_XC_B97M_RV,
   XC_EXCHANGE_CORRELATION,
-  "B97M-V exchange-correlation functional",
+  "B97M-rV exchange-correlation functional",
   XC_FAMILY_MGGA,
-  {&xc_ref_Mardirossian2015_074111, NULL, NULL, NULL, NULL},
+  {&xc_ref_Mardirossian2017_35, NULL, NULL, NULL, NULL},
   XC_FLAGS_3D | XC_FLAGS_VV10 | XC_FLAGS_NEEDS_TAU | MAPLE2C_FLAGS,
   1e-15,
   {N_PAR, names, desc, par_b97m_v, set_ext_params_cpy},
