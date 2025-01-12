@@ -1,3 +1,18 @@
+# A modified version of libxc for quantum espresso
+
+
+This is a modified version of libxc(base verison is the devel branch[https://gitlab.com/libxc/libxc/-/tree/64a04c5292dfd8d2fbe69ac7283a37bb8509785e]). XC functionals of wb97mrv(id=768), b97mrv(id=769) and wb97xrv(id=767) by Narbe Mardirossian et al.[https://pubs.acs.org/doi/10.1021/acs.jpclett.6b02527] are added. 
+
+The difference between wb97mrv(id=768), b97mrv(id=769), wb97xrv(id=767) and the original wb97mv(id=531), b97mv(id=254), wb97xv(id=466) is that, the vv10[https://doi.org/10.1063/1.3521275] nonlocal functionl in original functionals is replaced with the new rvv10[https://doi.org/10.1103/PhysRevB.87.041108] functional. For the reason of only rvv10 is implemented in quantum espresso[https://gitlab.com/QEF/q-e] and some other code using the plane wave basis set. So, to use wb97mrv(id=768), b97mrv(id=769) and wb97xrv(id=767) in quantum espresso, the parameters for vv10 have to be updated with the optimized parameters. Basically, this modification of libxc is almost specified for using of wb97mrv(id=768), b97mrv(id=769), wb97xrv(id=767) in quantum espresso.
+
+ 
+ 
+
+
+Following is the original readme content
+
+======================================================================================
+
 # Libxc
 
 Libxc is a library of exchange-correlation functionals for
